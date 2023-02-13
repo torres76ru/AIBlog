@@ -10,3 +10,5 @@ db.sqlite3-journal
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+**/__pycache__/
+AIBlog/AIBlog/__pycache__/settings.cpython-311.pyc
