@@ -1,2 +1,3 @@
 /virt
-/AIBlog/settings.py
+/AIBlog/AIBlog/settings.py
+/AIBlog/db.sqlite3
