@@ -7,17 +7,25 @@
 <div class="post">
     <div class="post__header">
         <h2><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a></h2>
-        <h4>
-            Author: <em>{{ post.author.first_name }} {{ post.author.last_name}}</em>
-        </h4>
-        <small>
-            <a href="{% url 'update_post' post.pk %}">Edit</a>
-            <a href="{% url 'delete_post' post.pk %}">Delete</a>
-        </small>
+        <p>
+            Author: <em>
+                {{ post.author.first_name }} 
+                {{ post.author.last_name}}  - 
+                {{ post.post_date }}
+            </em>
+            {% if user.is_authenticated %}
+            - 
+            <small>
+                <a href="{% url 'update_post' post.pk %}">Edit</a>
+                <a href="{% url 'delete_post' post.pk %}">Delete</a>
+            </small>
+            {% endif %}
+        </p>
+        
     </div>
     
     
-    <div class="post__body">{{ post.body }}</div>
+    <div class="post__body">{{ post.body|truncatewords:20 }}</div>
 </div>
 {% endfor %}
 

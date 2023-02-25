@@ -1,5 +1,4 @@
 /virt
-/AIBlog/AIBlog/settings.py
 /AIBlog/db.sqlite3
 
 # Django stuff:
@@ -7,9 +6,7 @@
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 **/__pycache__/
-AIBlog/AIBlog/settings.py
